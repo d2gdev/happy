@@ -56,5 +56,5 @@
 {!! $data->render() !!}
 
 
-<p class="text-center text-primary"><small>Tutorial by ItSolutionStuff.com</small></p>
+<p class="text-center text-primary"><small>Happy Talker - Learn a Language Today</small></p>
 @endsection
