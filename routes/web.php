@@ -24,7 +24,15 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/about-us', [about-usController::class, 'index'])->name('about-us');
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Auth::routes();
+
+Route::get('/about-us', [HomeController::class, 'about-us'])->name('about-us');
 
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
@@ -34,3 +42,5 @@ Route::group(['middleware' => ['auth']], function() {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/about-us', [App\Http\Controllers\HomeController::class, 'about-us'])->name('about-us');
