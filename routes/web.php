@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/about-us', [about-usController::class, 'index'])->name('about-us');
+Route::get('/index', [about-usController::class, 'index'])->name('home');
 
 Route::get('/', function () {
     return view('welcome');
